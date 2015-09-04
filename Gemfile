@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby '2.0.0'
+ruby '2.2.2'
 gem 'sinatra'
 gem 'mojo_magick'
 gem 'slim'
@@ -12,7 +12,7 @@ end
 group :development do
   gem 'rerun'
   gem 'tux'
-  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :test do

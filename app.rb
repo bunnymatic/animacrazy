@@ -21,7 +21,8 @@ class Gifitup < Sinatra::Base
 
   get '/' do
     fetch_fonts
-    slim :index, :layout => :layout, :locals => {:frames => nil, :background => '#000000', :fonts => @fonts, :font => Font.default.name, :delay => 0.40 }
+    default_font = Font.default.nil? ? 'Helvetica' : Font.default.name
+    slim :index, :layout => :layout, :locals => {:frames => nil, :background => '#000000', :fonts => @fonts, :font => default_font, :delay => 0.40 }
   end
 
   post '/' do
